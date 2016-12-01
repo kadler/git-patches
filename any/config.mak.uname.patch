@@ -1,0 +1,23 @@
+--- a/config.mak.uname	2016-03-28 15:17:31.000000000 -0500
++++ b/config.mak.uname	2016-05-09 13:52:29.669828000 -0500
+@@ -257,6 +257,20 @@
+ 	endif
+ 	GIT_TEST_CMP = cmp
+ endif
++ifeq ($(uname_S),OS400)
++	DEFAULT_PAGER = more
++	NO_STRCASESTR = YesPlease
++	NO_MEMMEM = YesPlease
++	NO_MKDTEMP = YesPlease
++	NO_MKSTEMPS = YesPlease
++	NO_STRLCPY = YesPlease
++	NO_NSEC = YesPlease
++	FREAD_READS_DIRECTORIES = UnfortunatelyYes
++	INTERNAL_QSORT = UnfortunatelyYes
++	NEEDS_LIBICONV = YesPlease
++	BASIC_CFLAGS += -D_LARGE_FILES
++	PTHREAD_LIBS = -lpthread
++endif
+ ifeq ($(uname_S),GNU)
+ 	# GNU/Hurd
+ 	HAVE_ALLOCA_H = YesPlease

@@ -1,0 +1,11 @@
+--- a/t/t5003-archive-zip.sh	2016-12-01 14:29:18 +0000
++++ b/t/t5003-archive-zip.sh	2016-12-01 14:29:06 +0000
+@@ -71,7 +71,7 @@
+     'mkdir a &&
+      echo simple textfile >a/a &&
+      mkdir a/bin &&
+-     cp /bin/sh a/bin &&
++     cp /QOpenSys/usr/bin/sh a/bin &&
+      printf "text\r"	>a/text.cr &&
+      printf "text\r\n"	>a/text.crlf &&
+      printf "text\n"	>a/text.lf &&
